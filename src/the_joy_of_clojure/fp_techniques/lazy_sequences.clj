@@ -15,3 +15,7 @@
   (lazy-seq
     (when (< i limit)
       (cons i (simple-range (inc i) limit)))))
+
+(defn fib
+  ([] (fib 1 1))
+  ([a b] (lazy-seq (cons a (fib b (+ a b))))))

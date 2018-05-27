@@ -19,3 +19,9 @@
     (let [actual (simple-range 0 9)
           expected (list 0 1 2 3 4 5 6 7 8)]
       (is (= expected actual)))))
+
+(deftest fib-test
+  (testing "fib"
+    (let [actual (take 10 (fib))
+          expected (list 1 1 2 3 5 8 13 21 34 55)]
+      (is (= expected actual)))))
